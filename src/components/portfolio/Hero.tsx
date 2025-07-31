@@ -103,13 +103,13 @@ const Hero = () => {
               onClick={() => {
                 document.querySelector("#experience")?.scrollIntoView({ behavior: "smooth" });
               }}>
-                My Experience
+                Experience
               </Button>
               <Button size="lg" variant="default" className="bg-primary hover:bg-primary/90"
               onClick={() => {
                 document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
               }}>
-                Explore My Projects
+                Projects
               </Button>
             </motion.div>
           </motion.div>
@@ -140,10 +140,12 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.8 }}
         >
-          <ArrowDown className="h-6 w-6 text-muted-foreground animate-bounce" 
-          onClick={() => {
-            document.querySelector("#experience")?.scrollIntoView({ behavior: "smooth" });
-          }} />
+          <ArrowDown 
+            className="h-6 w-6 text-muted-foreground animate-bounce cursor-pointer transition-transform hover:scale-110 hover:text-primary"
+            onClick={() => {
+                document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
         </motion.div>
       </div>
     </section>

@@ -12,8 +12,8 @@ const Projects = () => {
         "Secured the platform using JWT for user authentication and input validation filters to ensure safe user engagement"
       ],
       period: "May 2025 - Present",
-      githubUrl: "#",
-      liveUrl: "#"
+      githubUrl: "https://github.com/orgs/QueensRate/repositories",
+      liveUrl: "https://victorious-sea-0c594450f.1.azurestaticapps.net/"
     },
     {
       title: "ReceiptMe",
@@ -24,8 +24,8 @@ const Projects = () => {
         "Implemented Google OAuth and demographic comparisons to benchmark spending by age, location, or income"
       ],
       period: "June 2025",
-      githubUrl: "#",
-      liveUrl: "#"
+      githubUrl: "https://github.com/orgs/ReceiptMe/repositories",
+      liveUrl: "https://devpost.com/software/receiptme"
     },
     {
       title: "FrameMax",
@@ -36,8 +36,7 @@ const Projects = () => {
         "Integrated AWS S3 for secure, scalable storage of user photos and data, ensuring reliable access and management"
       ],
       period: "Jan 2025 – June 2025",
-      githubUrl: "#",
-      liveUrl: "#"
+      liveUrl: "https://apps.apple.com/ca/app/framemax/id6742083105"
     }
   ];
 
@@ -56,7 +55,7 @@ const Projects = () => {
             <div key={index} className="card-elevated p-6 group">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-semibold transition-colors">
                     {project.title}
                   </h3>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
