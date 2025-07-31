@@ -188,9 +188,13 @@
   }
 
   .card-elevated:hover {
-    @apply bg-surface-hover;
+    @apply transition-transform;
     box-shadow: var(--shadow-primary);
     transform: translateY(-2px);
+  }
+  
+  .dark .card-elevated:hover {
+    background-color: hsl(var(--card)); /* Prevent background change in dark mode */
   }
 
   .btn-primary {

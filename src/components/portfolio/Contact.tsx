@@ -17,7 +17,7 @@ const Contact = () => {
         </div>
 
         <div className="max-w-2xl mx-auto">
-          <div className="grid sm:grid-cols-2 gap-6 mb-12">
+          <div className="grid sm:grid-cols-1 gap-6 mb-12">
             <a 
               href="mailto:lucas.srigley@queensu.ca"
               className="card-elevated p-6 text-center group"

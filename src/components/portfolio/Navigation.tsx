@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useTheme } from "@/components/portfolio/ThemeProvider";
+import { Sun, Moon } from "lucide-react";
 
 const Navigation = () => {
+  const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -55,14 +58,13 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Navigation Toggle */}
           <Button 
             variant="ghost" 
-            size="sm"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
+            size="icon"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="hidden md:inline-flex"
           >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
         </div>
 

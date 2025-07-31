@@ -68,15 +68,21 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               <div className="flex gap-3">
-                <Button size="icon" variant="ghost">
-                  <Github className="h-5 w-5" />
-                </Button>
-                <Button size="icon" variant="ghost">
-                  <Linkedin className="h-5 w-5" />
-                </Button>
-                <Button size="icon" variant="ghost">
-                  <Mail className="h-5 w-5" />
-                </Button>
+                <a href="https://github.com/lucas-srigley/" target="_blank" rel="noopener noreferrer">
+                    <Button size="icon" variant="ghost">
+                        <Github className="h-5 w-5" />
+                    </Button>
+                </a>
+                <a href="https://linkedin.com/in/lucas-srigley/" target="_blank" rel="noopener noreferrer">
+                    <Button size="icon" variant="ghost">
+                        <Linkedin className="h-5 w-5" />
+                    </Button>
+                </a>
+                <a href="mailto:lucas.srigley@queensu.ca" target="_blank" rel="noopener noreferrer">
+                    <Button size="icon" variant="ghost">
+                        <Mail className="h-5 w-5" />
+                    </Button>
+                </a>
               </div>
               <Button 
                 size="icon" 
@@ -93,10 +99,16 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
             >
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-primary hover:bg-primary/90" 
+              onClick={() => {
+                document.querySelector("#experience")?.scrollIntoView({ behavior: "smooth" });
+              }}>
                 My Experience
               </Button>
-              <Button size="lg" variant="default" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" variant="default" className="bg-primary hover:bg-primary/90"
+              onClick={() => {
+                document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
+              }}>
                 Explore My Projects
               </Button>
             </motion.div>
@@ -128,7 +140,10 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.8 }}
         >
-          <ArrowDown className="h-6 w-6 text-muted-foreground animate-bounce" />
+          <ArrowDown className="h-6 w-6 text-muted-foreground animate-bounce" 
+          onClick={() => {
+            document.querySelector("#experience")?.scrollIntoView({ behavior: "smooth" });
+          }} />
         </motion.div>
       </div>
     </section>

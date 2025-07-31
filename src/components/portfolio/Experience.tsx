@@ -42,7 +42,7 @@ const Experience = () => {
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="card-elevated p-8">
+            <div key={index} className="card-elevated p-8 group">
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="lg:w-1/3">
                   <div className="flex items-start gap-4">
