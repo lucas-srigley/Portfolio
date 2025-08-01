@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
 import { useTheme } from "@/components/portfolio/ThemeProvider";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Menu, X } from "lucide-react"; // <-- optionally use icons
 
-const Navigation = () => {
+const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,9 +12,9 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
@@ -23,23 +22,29 @@ const Navigation = () => {
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
-    { label: "Contact", href: "#contact" }
+    { label: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
     setIsOpen(false);
     const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-border' : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/80 backdrop-blur-md border-b border-border"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container-max section-padding">
         <div className="flex items-center justify-between h-16">
-          <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          <button
+            onClick={() =>
+              window.scrollTo({ top: 0, behavior: "smooth" })
+            }
             className="text-xl font-bold text-gradient hover:scale-105 transition-transform"
           >
             LS
@@ -58,14 +63,30 @@ const Navigation = () => {
             ))}
           </div>
 
-          <Button 
-            variant="ghost" 
-            size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="hidden md:inline-flex"
-          >
-            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
+          <div className="flex items-center space-x-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() =>
+                setTheme(theme === "dark" ? "light" : "dark")
+              }
+              className="hidden md:inline-flex"
+            >
+              {theme === "dark" ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </Button>
+
+            {/* Mobile Menu Toggle Button */}
+            <button
+              className="md:hidden p-2 rounded-md hover:bg-muted/40 transition"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation Menu */}
@@ -89,4 +110,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Navbar;

@@ -1,4 +1,4 @@
-import Navigation from "@/components/portfolio/Navigation";
+import Navbar from "@/components/portfolio/Navbar";
 import Hero from "@/components/portfolio/Hero";
 import About from "@/components/portfolio/About";
 import Experience from "@/components/portfolio/Experience";
@@ -10,7 +10,7 @@ import Contact from "@/components/portfolio/Contact";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
+      <Navbar />
       <Hero />
       <About />
       <Experience />
