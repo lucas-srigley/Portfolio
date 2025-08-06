@@ -81,7 +81,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
               >
-                I love to build things.
+                I’m passionate about building scalable, user-focused software.
               </motion.p>
             </div>
 
