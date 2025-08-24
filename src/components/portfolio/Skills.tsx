@@ -5,17 +5,32 @@ const Skills = () => {
     {
       title: "Languages",
       icon: Code,
-      skills: ["Python", "Java", "C/C++", "HTML/CSS", "PHP", "JavaScript", "TypeScript", "SQL", "Arduino", "Swift"]
+      skills: ["Python", "Java", "C/C++", "JavaScript", "TypeScript", "PHP", "SQL", "Swift", "HTML/CSS", "R"]
     },
     {
-      title: "Developer Tools", 
+      title: "Frameworks & Libraries", 
+      icon: Globe,
+      skills: ["Angular", "React.js", "Node.js", "Express.js", "Spring Boot", "jQuery", "Bootstrap", "JUnit", "Cypress"]
+    },
+    {
+      title: "Cloud & DevOps Tools",
       icon: Wrench,
-      skills: ["GCP", "Azure", "AWS S3", "GitHub Actions", "Jenkins", "MongoDB", "MySQL", "PostgreSQL", "Postman", "Maven"]
+      skills: ["GCP", "Microsoft Azure", "AWS", "Jenkins", "GitHub Actions"]
     },
     {
-      title: "Frameworks",
-      icon: Globe, 
-      skills: ["Angular", "SpringBoot", "React", "Node.js", "Express", "Bootstrap", "JUnit", "Cypress"]
+      title: "Developer Tools",
+      icon: Wrench,
+      skills: ["Postman", "Maven", "Git/GitHub/GitLab", "Linux", "Bash", "Snyk", "Android Studio", "Google Analytics", "Trello"]
+    },
+    {
+      title: "Databases",
+      icon: Database,
+      skills: ["PostgreSQL", "MySQL", "MongoDB"]
+    },
+    {
+      title: "Concepts & Methodologies",
+      icon: Globe,
+      skills: ["REST APIs", "Microservices", "CI/CD", "Agile/Scrum", "Test-Driven Development (TDD)"]
     }
   ];
 

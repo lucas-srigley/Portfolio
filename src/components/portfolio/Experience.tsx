@@ -1,31 +1,35 @@
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import CelesticaLogo from "../../assets/celestica.png";
+import SmithLogo from "../../assets/smith_eng.jpg";
+import { Calendar, MapPin } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
     {
-      title: "Full-Stack Developer Intern",
+      title: "Full-Stack Cloud Developer Intern",
       company: "Celestica",
+      logo: CelesticaLogo,
       location: "Toronto, ON",
-      period: "May 2024 – Aug 2025",
+      period: <p>September 2025 - Present (On-Call)<br />May 2024 – Aug 2025 (Full-Time)</p>,
       description: [
-        "Contributing to the development and maintenance of 30+ internal web apps on GCP to streamline enterprise operations",
-        "Leveraging Angular, SpringBoot, Node.js, Maven, Git, Bootstrap, Postman, and Jenkins to support 17,000+ active users",
-        "Upgraded a key legacy app to a modern stack, increasing user activity by 110% and performance by 60%",
-        "Ensuring consistent test coverage across the codebase by implementing automated tests using Cypress and JUnit",
-        "Resolving ServiceNow tickets by investigating issues, fixing bugs, and providing timely support via email",
-        "Participating in code review and security vulnerability meetings to ensure the quality of software and changes",
-        "Providing mentorship and ongoing support to incoming interns, ensuring a smooth and efficient transition into the team"
+        "Developed scalable microservices and APIs across 20+ enterprise supply chain apps on GCP, supporting 18K+ users",
+        "Boosted performance of 10+ apps by 20–40% on average through upgrades, reducing load times and backend usage",
+        "Increased user engagement 117% by migrating the main news site from AngularJS to Angular and upgrading Spring Boot",
+        "Implemented the Mochawesome reporter for Cypress E2E tests, integrating with Jenkins to improve test visibility, tracking, and CI/CD efficiency",
+        "Resolved 100+ ServiceNow tickets by diagnosing and fixing issues, improving turnaround times and overall user experience",
+        "Enhanced software quality and security by writing JUnit tests, participating in code reviews, and demonstrating best practices",
+        "Mentored and onboarded new interns, accelerating ramp-up time and ensuring smooth integration into Agile workflows",
       ]
     },
     {
-      title: "Undergraduate Teaching Assistant",
+      title: "Teaching Assistant",
       company: "Smith Engineering",
-      location: "Kingston, ON", 
-      period: "Sep 2023 – Dec 2023",
+      logo: SmithLogo,
+      location: "Kingston, ON",
+      period: <p>Operating Systems (Fall 2025)<br />Introduction to Programming (Fall 2024)</p>,    
       description: [
-        "Delivered clear explanations and assisted 30 students with coding challenges in an introductory C programming course",
-        "Assisted in labs and graded assignments, providing constructive feedback to help students identify areas for improvement",
-        "Provided tailored guidance to students across varying skill levels, enhancing student understanding and engagement"
+        "Guided students through labs, coding challenges, and projects using C, Linux Bash, and Git, offering clear explanations and personalized feedback to enhance problem-solving skills",
+        "Assisted students in learning foundational programming concepts, debugging techniques, and completing coding assignments, supporting skill development across diverse experience levels",
+        "Provided constructive guidance and feedback to help students strengthen coding proficiency and analytical thinking",
       ]
     }
   ];
@@ -46,9 +50,11 @@ const Experience = () => {
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="lg:w-1/3">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
-                      <Briefcase className="w-6 h-6 text-primary" />
+                    {/* Logo replaces blue background and fills container */}
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden">
+                      <img src={exp.logo} alt={exp.company} className="w-full h-full object-contain" />
                     </div>
+
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold mb-2">{exp.title}</h3>
                       <p className="font-medium text-primary mb-2">{exp.company}</p>

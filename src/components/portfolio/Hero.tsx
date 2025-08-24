@@ -11,7 +11,7 @@ import {
 import { motion } from "framer-motion";
 import { useTheme } from "@/components/portfolio/ThemeProvider";
 import { useEffect, useState } from "react";
-import profilePicture from "@/assets/profile-picture.jpeg";
+import profilePicture from "@/assets/profile_picture.jpeg";
 import { Typewriter } from 'react-simple-typewriter';
 import Tilt from 'react-parallax-tilt';
 
