@@ -139,13 +139,6 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
             >
-              <a href="/resume.pdf" download>
-                <Button size="lg" variant="outline" className="flex items-center gap-2">
-                  <Download className="h-4 w-4" />
-                  Resume
-                </Button>
-              </a>
-
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90"
