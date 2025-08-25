@@ -10,6 +10,7 @@ const About = () => {
   return (
     <section id="about" className="py-20 section-padding" ref={ref}>
       <div className="container-max">
+        {/* Section header */}
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -23,6 +24,7 @@ const About = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Left column: Education & Achievements */}
           <motion.div 
             className="space-y-6"
             initial={{ opacity: 0, x: -30 }}
@@ -69,6 +71,7 @@ const About = () => {
             </div>
           </motion.div>
 
+          {/* Right column: Relevant Coursework */}
           <motion.div 
             className="space-y-6"
             initial={{ opacity: 0, x: 30 }}
@@ -77,30 +80,40 @@ const About = () => {
           >
             <div className="card-elevated p-8">
               <h3 className="text-xl font-semibold mb-4">Relevant Coursework</h3>
-              <div className="grid grid-cols-1 gap-3">
-                {[
-                  "Algorithms",
-                  "Computer Architecture", 
-                  "Data Structures",
-                  "Database Management",
-                  "Embedded Systems",
-                  "Networks",
-                  "OOP",
-                  "Operating Systems",
-                  "Principles of Design & Development",
-                  "Software Specifications"
-                ].map((course, index) => (
-                  <motion.div 
-                    key={course} 
-                    className="flex items-center gap-2 p-2 rounded hover:bg-muted/50 transition-colors"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                    transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
-                  >
-                    <div className="w-2 h-2 bg-primary/60 rounded-full"></div>
-                    <span className="text-sm">{course}</span>
-                  </motion.div>
-                ))}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                {(() => {
+                  const courses = [
+                    "Algorithms",
+                    "Computer Architecture", 
+                    "Data Structures",
+                    "Database Management",
+                    "Embedded Systems",
+                    "Networks",
+                    "OOP",
+                    "Operating Systems",
+                    "Principles of Development",
+                    "Software Specifications"
+                  ];
+                  const mid = Math.ceil(courses.length / 2);
+                  const firstCol = courses.slice(0, mid);
+                  const secondCol = courses.slice(mid);
+                  return [firstCol, secondCol].map((col, colIndex) => (
+                    <div key={colIndex} className="space-y-2">
+                      {col.map((course, index) => (
+                        <motion.div 
+                          key={course} 
+                          className="flex items-center gap-2 p-2 rounded hover:bg-muted/50 transition-colors"
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                          transition={{ duration: 0.3, delay: 0.6 + index * 0.05 + colIndex * 0.1 }}
+                        >
+                          <div className="w-2 h-2 bg-primary/60 rounded-full"></div>
+                          <span className="text-sm">{course}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+                  ));
+                })()}
               </div>
             </div>
           </motion.div>

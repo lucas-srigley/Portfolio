@@ -1,10 +1,14 @@
 import { ExternalLink, Github, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { QRateLogo } from "../../assets/QRateLogo";
+import ReceiptMeLogo from "../../assets/receipt_me.png";
+import FrameMaxLogo from "../../assets/framemax.webp";
 
 const Projects = () => {
   const projects = [
     {
       title: "qRate",
+      logo: QRateLogo,
       description: "Deployed a full-stack website for a course/professor review platform, enabling students to share and explore ratings",
       technologies: ["React", "Express", "Node.js", "MongoDB", "Azure"],
       features: [
@@ -17,6 +21,7 @@ const Projects = () => {
     },
     {
       title: "ReceiptMe",
+      logo: ReceiptMeLogo,
       description: "Built a full-stack expense tracker with React, Express, and MongoDB, enabling receipt uploads and budget insights",
       technologies: ["React", "Express", "MongoDB", "Gemini API", "Google OAuth"],
       features: [
@@ -29,13 +34,14 @@ const Projects = () => {
     },
     {
       title: "FrameMax",
+      logo: FrameMaxLogo,
       description: "Published an AI-powered iOS app in Swift using the OpenAI API for physique analysis and personalized feedback",
       technologies: ["Swift", "Node.js", "Express", "PostgreSQL", "AWS S3", "OpenAI API"],
       features: [
         "Built PostgreSQL schemas and used Express to optimize queries and maintain data integrity for user metrics",
         "Integrated AWS S3 for secure, scalable storage of user photos and data, ensuring reliable access and management"
       ],
-      period: "Jan 2025 – June 2025",
+      period: "Jan – June 2025",
       liveUrl: "https://apps.apple.com/ca/app/framemax/id6742083105"
     }
   ];
@@ -52,12 +58,26 @@ const Projects = () => {
 
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="card-elevated p-6 group">
+            <div key={index} className="card-elevated p-6 group w-full max-w-[420px] mx-auto">
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-semibold transition-colors">
-                    {project.title}
-                  </h3>
+                {/* Logo + Title + Date inline */}
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2">
+                    {project.title === "qRate" ? (
+                      <QRateLogo />
+                    ) : project.logo ? (
+                      <div className="w-10 h-10 flex items-center justify-center overflow-hidden rounded">
+                        <img
+                          src={project.logo}
+                          alt={project.title}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    ) : null}
+                    <h3 className="text-xl font-semibold transition-colors">
+                      {project.title}
+                    </h3>
+                  </div>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Calendar className="w-4 h-4" />
                     {project.period}
@@ -89,18 +109,22 @@ const Projects = () => {
                 </div>
 
                 <div className="flex items-center gap-3 pt-4 border-t border-border">
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button size="sm" asChild>
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </a>
-                  </Button>
+                  {project.githubUrl && (
+                    <Button variant="outline" size="sm" asChild>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </a>
+                    </Button>
+                  )}
+                  {project.liveUrl && (
+                    <Button size="sm" asChild>
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>

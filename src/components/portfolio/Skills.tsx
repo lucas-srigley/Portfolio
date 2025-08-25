@@ -5,12 +5,12 @@ const Skills = () => {
     {
       title: "Languages",
       icon: Code,
-      skills: ["Python", "Java", "C/C++", "JavaScript", "TypeScript", "PHP", "SQL", "Swift", "HTML/CSS", "R"]
+      skills: ["Python", "Java", "C/C++", "JavaScript", "TypeScript", "PHP", "SQL", "Swift", "HTML/CSS", "R", "LLMs"]
     },
     {
       title: "Frameworks & Libraries", 
       icon: Globe,
-      skills: ["Angular", "React.js", "Node.js", "Express.js", "Spring Boot", "jQuery", "Bootstrap", "JUnit", "Cypress"]
+      skills: ["Angular", "React.js", "Node.js", "Express.js", "Spring Boot", "jQuery", "Bootstrap", "JUnit", "Cypress", "scikit-learn", "pandas", "NumPy", "Matplotlib"]
     },
     {
       title: "Cloud & DevOps Tools",
