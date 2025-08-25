@@ -27,7 +27,7 @@ const extracurriculars: ExtracurricularItem[] = [
     role: "Innovation Design Team Member – NLP",
     organization: "QMIND",
     logo: QMIND,
-    period: "Oct 2023 – Present",
+    period: "Sep 2023 – May 2024",
     location: "Kingston, ON",
     achievements: [
       "Developed a Python-based application using LLMs, scikit-learn, pandas, NumPy, and Matplotlib to enable non-technical users to design, tailor, and train personalized chatbots",
