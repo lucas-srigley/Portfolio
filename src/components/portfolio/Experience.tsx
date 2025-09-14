@@ -24,7 +24,7 @@ const Experience = () => {
       company: "Smith Engineering",
       logo: SmithLogo,
       location: "Kingston, ON",
-      period: <p>Operating Systems (Fall 2025)<br />Introduction to Programming (Fall 2023)</p>,    
+      period: <p>Operating Systems (Fall 2025)<br />Intro to Programming (Fall 2023)</p>,    
       description: [
         "Led weekly lab sessions, clearly clarifying complex concepts in C programming, Linux kernel, and Git for 50+ students",
         "Provided one-on-one mentorship, adapting explanations to diverse learning styles to improve comprehension",

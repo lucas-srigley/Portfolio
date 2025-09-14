@@ -71,7 +71,6 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Right column: Relevant Coursework */}
           <motion.div 
             className="space-y-6"
             initial={{ opacity: 0, x: 30 }}
@@ -79,20 +78,21 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="card-elevated p-8">
-              <h3 className="text-xl font-semibold mb-4">Relevant Coursework</h3>
+              <h3 className="text-xl font-semibold mb-4">Coursework</h3>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                 {(() => {
                   const courses = [
+                    "Machine Learning & Deep Learning",
+                    "Computer Vision",
                     "Algorithms",
-                    "Computer Architecture", 
                     "Data Structures",
-                    "Database Management",
-                    "Embedded Systems",
-                    "Networks",
                     "OOP",
+                    "Networks",
+                    "Database Management",
                     "Operating Systems",
-                    "Principles of Development",
-                    "Software Specifications"
+                    "Computer Architecture",
+                    "Embedded Systems",
+                    "Quality Assurance"
                   ];
                   const mid = Math.ceil(courses.length / 2);
                   const firstCol = courses.slice(0, mid);
