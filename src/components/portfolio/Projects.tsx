@@ -9,28 +9,15 @@ const Projects = () => {
     {
       title: "qRate",
       logo: QRateLogo,
-      description: "Deployed a full-stack website for a course/professor review platform, enabling students to share and explore ratings",
+      description: "•	Deployed a MERN website for a course/professor review platform, enabling students to share and explore ratings",
       technologies: ["React", "Express", "Node.js", "MongoDB", "Azure"],
       features: [
         "Set up CI/CD pipelines with GitHub Actions to automate testing and deployment, improving development speed",
-        "Secured the platform using JWT for user authentication and input validation filters to ensure safe user engagement"
+        "Secured the platform with JWT auth, input validation, and profanity filters to ensure safe user engagement"
       ],
       period: "May 2025 - Present",
       githubUrl: "https://github.com/orgs/QueensRate/repositories",
       liveUrl: "https://victorious-sea-0c594450f.1.azurestaticapps.net/"
-    },
-    {
-      title: "ReceiptMe",
-      logo: ReceiptMeLogo,
-      description: "Built a full-stack expense tracker with React, Express, and MongoDB, enabling receipt uploads and budget insights",
-      technologies: ["React", "Express", "MongoDB", "Gemini API", "Google OAuth"],
-      features: [
-        "Integrated Gemini AI API to generate personalized 30-day summaries with natural language insights from spending data",
-        "Implemented Google OAuth and demographic comparisons to benchmark spending by age, location, or income"
-      ],
-      period: "June 2025",
-      githubUrl: "https://github.com/orgs/ReceiptMe/repositories",
-      liveUrl: "https://devpost.com/software/receiptme"
     },
     {
       title: "FrameMax",
@@ -41,9 +28,22 @@ const Projects = () => {
         "Built PostgreSQL schemas and used Express to optimize queries and maintain data integrity for user metrics",
         "Integrated AWS S3 for secure, scalable storage of user photos and data, ensuring reliable access and management"
       ],
-      period: "Jan – June 2025",
+      period: "Jan – July 2025",
       liveUrl: "https://apps.apple.com/ca/app/framemax/id6742083105"
-    }
+    },
+    {
+      title: "ReceiptMe",
+      logo: ReceiptMeLogo,
+      description: "•	Built a MERN expense tracker website, enabling users to upload receipts, track expenses, and gain budget insights",
+      technologies: ["React", "Express", "MongoDB", "Gemini API", "Google OAuth"],
+      features: [
+        "Integrated Gemini AI API to generate personalized 30-day summaries with natural language insights from spending data",
+        "Implemented Google OAuth and demographic comparisons to benchmark spending by age, location, or income"
+      ],
+      period: "June 2025",
+      githubUrl: "https://github.com/orgs/ReceiptMe/repositories",
+      liveUrl: "https://devpost.com/software/receiptme"
+    },
   ];
 
   return (

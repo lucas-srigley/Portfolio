@@ -5,12 +5,12 @@ const Skills = () => {
     {
       title: "Languages",
       icon: Code,
-      skills: ["Python", "Java", "C/C++", "JavaScript", "TypeScript", "PHP", "SQL", "Swift", "HTML/CSS", "R", "LLMs"]
+      skills: ["Python", "Java", "C/C++", "JavaScript", "TypeScript", "PHP", "SQL", "Swift", "HTML/CSS", "R"]
     },
     {
       title: "Frameworks & Libraries", 
       icon: Globe,
-      skills: ["Angular", "React.js", "Node.js", "Express.js", "Spring Boot", "jQuery", "Bootstrap", "JUnit", "Cypress", "scikit-learn", "pandas", "NumPy", "Matplotlib"]
+      skills: ["Angular", "React.js", "Next.js", "Node.js", "Express.js", "Spring Boot", "Flask", "jQuery", "Bootstrap", "JUnit", "Cypress", "Pytest"]
     },
     {
       title: "Cloud & DevOps Tools",
@@ -18,9 +18,9 @@ const Skills = () => {
       skills: ["GCP", "Microsoft Azure", "AWS", "Jenkins", "GitHub Actions"]
     },
     {
-      title: "Developer Tools",
-      icon: Wrench,
-      skills: ["Postman", "Maven", "Git/GitHub/GitLab", "Linux", "Bash", "Snyk", "Android Studio", "Google Analytics", "Trello"]
+      title: "AI/ML Tools",
+      icon: Globe,
+      skills: ["TensorFlow", "PyTorch", "scikit-learn", "OpenCV", "Pandas", "NumPy", "LangChain"]
     },
     {
       title: "Databases",
@@ -28,9 +28,19 @@ const Skills = () => {
       skills: ["PostgreSQL", "MySQL", "MongoDB"]
     },
     {
+      title: "Data Formats",
+      icon: Wrench,
+      skills: ["JSON", "XML", "YAML", "CSV"]
+    },
+    {
+      title: "Developer Tools",
+      icon: Wrench,
+      skills: ["Postman", "Maven", "Git", "Linux", "Bash", "Snyk", "Android Studio", "Google Analytics", "Webpack"]
+    },
+    {
       title: "Concepts & Methodologies",
       icon: Globe,
-      skills: ["REST APIs", "Microservices", "CI/CD", "Agile/Scrum", "Test-Driven Development (TDD)"]
+      skills: ["REST APIs", "Microservices", "CI/CD", "SDLC", "Agile/Scrum", "Test-Driven Development (TDD)"]
     }
   ];
 

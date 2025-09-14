@@ -11,14 +11,13 @@ const Experience = () => {
       location: "Toronto, ON",
       period: <p>September 2025 - Present (On-Call)<br />May 2024 – Aug 2025 (Full-Time)</p>,
       description: [
-        "Developed scalable microservices and APIs across 20+ enterprise supply chain apps on GCP, supporting 18K+ users",
-        "Boosted performance of 10+ apps by 20–40% on average through upgrades, reducing load times and backend usage",
-        "Increased user engagement 117% by migrating the main news site from AngularJS to Angular and upgrading Spring Boot",
-        "Implemented the Mochawesome reporter for Cypress E2E tests, integrating with Jenkins to improve test visibility, tracking, and CI/CD efficiency",
-        "Resolved 100+ ServiceNow tickets by diagnosing and fixing issues, improving turnaround times and overall user experience",
-        "Enhanced software quality and security by writing JUnit tests, participating in code reviews, and demonstrating best practices",
-        "Mentored and onboarded new interns, accelerating ramp-up time and ensuring smooth integration into Agile workflows",
-      ]
+        "Developed scalable microservices and APIs across 20+ enterprise supply chain apps on GCP, supporting 26K+ users",
+        "Boosted performance of 10+ apps by 20–40% on average through upgrades, cutting load times and backend usage",
+        "Increased user engagement 117% by migrating main news site from AngularJS to Angular and upgrading Spring Boot",
+        "Implemented the Mochawesome reporter for Cypress E2E tests, integrating it with Jenkins to provide detailed results",
+        "Resolved 100+ ServiceNow tickets by diagnosing and fixing issues, improving turnaround times, and user experience",
+        "Enhanced software quality/security by writing unit tests, contributing to code reviews, and demonstrating solutions",
+      ]      
     },
     {
       title: "Teaching Assistant",
@@ -27,10 +26,13 @@ const Experience = () => {
       location: "Kingston, ON",
       period: <p>Operating Systems (Fall 2025)<br />Introduction to Programming (Fall 2023)</p>,    
       description: [
-        "Guided students through labs, coding challenges, and projects using C, Linux Bash, and Git, offering clear explanations and personalized feedback to enhance problem-solving skills",
-        "Assisted students in learning foundational programming concepts, debugging techniques, and completing coding assignments, supporting skill development across diverse experience levels",
-        "Provided constructive guidance and feedback to help students strengthen coding proficiency and analytical thinking",
-      ]
+        "Led weekly lab sessions, clearly clarifying complex concepts in C programming, Linux kernel, and Git for 50+ students",
+        "Provided one-on-one mentorship, adapting explanations to diverse learning styles to improve comprehension",
+        "Guided students through debugging techniques and best practices, significantly reducing assignment errors",
+        "Assisted in grading assignments and projects, ensuring fair evaluation while delivering constructive feedback",
+        "Collaborated with professors to design effective lab exercises and proactively address common student challenges",
+        "Supported first-year students in building strong programming foundations, contributing to higher retention"
+      ]    
     }
   ];
 
