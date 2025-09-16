@@ -16,7 +16,7 @@ const Projects = () => {
         "Secured the platform with JWT auth, input validation, and profanity filters to ensure safe user engagement"
       ],
       period: "May 2025 - Present",
-      githubUrl: "https://github.com/orgs/QueensRate/repositories",
+      githubUrl: "https://github.com/QueensRate",
       liveUrl: "https://victorious-sea-0c594450f.1.azurestaticapps.net/"
     },
     {
