@@ -3,7 +3,7 @@
 A modern, responsive portfolio website showcasing my experience as a Computer Engineering student and Full-Stack Developer. Built with React, TypeScript, and Tailwind CSS with smooth animations and dark/light theme support.
 
 ## 🌐 Live Website
-**[View Portfolio]([https://your-portfolio-url.com](https://lucas-srigley.github.io/portfolio/))**
+**[View Portfolio](https://lucas-srigley.github.io/portfolio/)**
 
 ## 🛠️ Tech Stack
 - **Frontend**: React, TypeScript, Tailwind CSS
