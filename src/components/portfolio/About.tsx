@@ -82,7 +82,8 @@ const About = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                 {(() => {
                   const courses = [
-                    "Machine Learning & Deep Learning",
+                    "Machine Learning",
+                    "Deep Learning",
                     "Computer Vision",
                     "Algorithms",
                     "Data Structures",

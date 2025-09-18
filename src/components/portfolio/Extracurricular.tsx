@@ -1,4 +1,5 @@
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Baja from "../../assets/baja.png";
 import QMIND from "../../assets/qmind.ico";
 
@@ -9,6 +10,7 @@ interface ExtracurricularItem {
   period: string;
   location: string;
   achievements: string[];
+  githubUrl?: string;
 }
 
 const extracurriculars: ExtracurricularItem[] = [
@@ -22,9 +24,10 @@ const extracurriculars: ExtracurricularItem[] = [
       "Led development of an Arduino-based data acquisition system to monitor and relay real-time vehicle metrics",
       "Created embedded C/C++ firmware for microcontrollers to process and transmit telemetry data with minimal latency",
     ],
+    githubUrl: "https://github.com/lucas-srigley/Baja_Testing"
   },
   {
-    role: "Innovation Design Team Member – NLP",
+    role: "NLP Software Developer",
     organization: "QMIND",
     logo: QMIND,
     period: "Sep 2023 – May 2024",
@@ -33,6 +36,7 @@ const extracurriculars: ExtracurricularItem[] = [
       "Developed a Python-based application using LLMs, scikit-learn, pandas, NumPy, and Matplotlib to enable non-technical users to design, tailor, and train personalized chatbots",
       "Implemented data preprocessing, model training, and visualization pipelines to provide intuitive insights and performance metrics",
     ],
+    githubUrl: "https://github.com/lucas-srigley/Chatbot"
   },
 ];
 
@@ -85,6 +89,16 @@ const Extracurricular = () => {
                       </li>
                     ))}
                   </ul>
+                  {item.githubUrl && (
+                    <div className="pt-4">
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={item.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </a>
+                      </Button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

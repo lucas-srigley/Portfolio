@@ -5,22 +5,27 @@ const Skills = () => {
     {
       title: "Languages",
       icon: Code,
-      skills: ["Python", "Java", "C/C++", "JavaScript", "TypeScript", "PHP", "SQL", "Swift", "HTML/CSS", "R"]
+      skills: ["Python", "Java", "C/C++", "JavaScript", "TypeScript", "SQL", "PHP", "HTML/CSS"]
     },
     {
       title: "Frameworks & Libraries", 
       icon: Globe,
-      skills: ["Angular", "React.js", "Next.js", "Node.js", "Express.js", "Spring Boot", "Flask", "jQuery", "Bootstrap", "JUnit", "Cypress", "Pytest"]
+      skills: ["Angular", "React.js", "Node.js", "Express.js", "Next.js", "Spring Boot", "jQuery", "Bootstrap", "Flask", "SwiftUI"]
     },
     {
-      title: "Cloud & DevOps Tools",
+      title: "Build & DevOps Tools",
       icon: Wrench,
-      skills: ["GCP", "Microsoft Azure", "AWS", "Jenkins", "GitHub Actions"]
+      skills: ["GCP", "Azure", "AWS", "Jenkins", "GitHub Actions", "Maven", "Snyk"]
     },
     {
       title: "AI/ML Tools",
       icon: Globe,
-      skills: ["TensorFlow", "PyTorch", "scikit-learn", "OpenCV", "Pandas", "NumPy", "LangChain"]
+      skills: ["TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "Pandas", "NumPy", "LangChain"]
+    },
+    {
+      title: "Testing Tools",
+      icon: Wrench,
+      skills: ["JUnit", "Cypress", "Pytest"]
     },
     {
       title: "Databases",
@@ -28,21 +33,11 @@ const Skills = () => {
       skills: ["PostgreSQL", "MySQL", "MongoDB"]
     },
     {
-      title: "Data Formats",
-      icon: Wrench,
-      skills: ["JSON", "XML", "YAML", "CSV"]
-    },
-    {
-      title: "Developer Tools",
-      icon: Wrench,
-      skills: ["Postman", "Maven", "Git", "Linux", "Bash", "Snyk", "Android Studio", "Google Analytics", "Webpack"]
-    },
-    {
       title: "Concepts & Methodologies",
       icon: Globe,
-      skills: ["REST APIs", "Microservices", "CI/CD", "SDLC", "Agile/Scrum", "Test-Driven Development (TDD)"]
+      skills: ["REST APIs", "Microservices", "CI/CD", "SDLC", "SaaS", "Agile/Scrum", "Test-Driven Development (TDD)"]
     }
-  ];
+  ];  
 
   return (
     <section id="skills" className="py-20 section-padding bg-muted/30">
