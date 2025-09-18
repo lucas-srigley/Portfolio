@@ -21,7 +21,7 @@ const extracurriculars: ExtracurricularItem[] = [
     period: "Sep 2023 – May 2024",
     location: "Kingston, ON",
     achievements: [
-      "Led development of an Arduino-based data acquisition system to monitor and relay real-time vehicle metrics",
+      "Led a 4-person team for development of an Arduino-based data acquisition system to monitor and relay real-time vehicle metrics",
       "Created embedded C/C++ firmware for microcontrollers to process and transmit telemetry data with minimal latency",
     ],
     githubUrl: "https://github.com/lucas-srigley/Baja_Testing"
