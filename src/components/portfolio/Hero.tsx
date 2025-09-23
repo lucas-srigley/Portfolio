@@ -69,9 +69,9 @@ const Hero = () => {
                     loop={true}
                     cursor
                     cursorStyle="|"
-                    typeSpeed={100}
-                    deleteSpeed={100}
-                    delaySpeed={500}
+                    typeSpeed={50}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
                 />
                 </motion.h2>
 
